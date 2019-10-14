@@ -5,8 +5,8 @@ ENV \
   PY_INSTALLE=run_install.py \
   PY_STARTUP=run_startup.py
 
-RUN apt-get update && apt-get upgrade -y
-RUN apt-get -y install ${PYTHON3_CMD} ${PYTHON3_CMD}-pip
+RUN apt-get update && \
+    apt-get -y install ${PYTHON3_CMD} ${PYTHON3_CMD}-pip
 
 ADD ${PY_INSTALLE} .
 ADD ${PY_STARTUP} .
