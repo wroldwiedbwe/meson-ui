@@ -19,21 +19,27 @@ jobs:
     executor: meson_ubuntu_builder
     steps:
       - checkout
-      - run: pip3 install PyQt5 pytest pytest-qt --user
+      - run: pip3 install PyQt5 --user
+      - run: pip3 install pytest --user
+      - run: pip3 install pytest-qt --user
       - run: python3 tool/testrun.py
       
   meson_debain_build:
     executor: meson_debain_builder
     steps:
       - checkout
-      - run: pip3 install PyQt5 pytest pytest-qt --user
+      - run: pip3 install PyQt5 --user
+      - run: pip3 install pytest --user
+      - run: pip3 install pytest-qt --user
       - run: python3 tool/testrun.py
 
   meson_fedora_build:
     executor: meson_fedora_builder
     steps:
       - checkout
-      - run: pip3 install PyQt5 pytest pytest-qt --user
+      - run: pip3 install PyQt5 --user
+      - run: pip3 install pytest --user
+      - run: pip3 install pytest-qt --user
       - run: python3 tool/testrun.py
 
 
