@@ -10,7 +10,7 @@ jobs:
     steps:
       - checkout
       - run: pytest run_utests.py
-      - run: pytest run_uitests.py
+      #  - run: pytest run_uitests.py
 
 workflows:
   version: 2
