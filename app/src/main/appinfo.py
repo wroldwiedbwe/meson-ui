@@ -27,7 +27,7 @@ class MesonUiPyPiInfo:
 
     @staticmethod
     def get_license() -> str:
-        return 'LGPL'
+        return 'Apache 2.0'
     # end of method
 
     @staticmethod
