@@ -9,7 +9,7 @@
 #                                                                                 #
 # NOTICES:                                                                        #
 #                                                                                 #
-# License: LGPL                                                                   #
+# License: Apache 2.0 :http://www.apache.org/licenses/LICENSE-2.0                 #
 #                                                                                 #
 ###################################################################################
 from app.src.main.appmain import mesonui_main
