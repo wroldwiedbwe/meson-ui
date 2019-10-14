@@ -7,7 +7,6 @@
 
 #### Status
 
-[![PyPI](https://img.shields.io/pypi/v/meson-ui.svg)](https://pypi.python.org/pypi/meson-ui)
 [![GitHub](https://img.shields.io/github/license/michaelbadcrumble/meson-ui.svg?color=blue)](https://github.com/michaelbadcrumble/meson-ui)
 [![CircleCI](https://circleci.com/gh/michaelbadcrumble/meson-ui.svg?style=shield)](https://circleci.com/gh/michaelbadcrumble/meson-ui)
 
