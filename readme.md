@@ -34,7 +34,7 @@ you would like a GUI device.
 ## Development
 
 All development on Meson-ui is done on the [GitHub project](https://github.com/michaelbadcrumble/meson-ui). 
-Instructions for contributing can be found on the [contribution page](Contributing.md).
+Instructions for contributing can be found on the [contribution page](contributing.md).
 
 You do not need to sign a CLA to contribute to Meson-ui.
 
@@ -47,6 +47,7 @@ Meson-ui requires the following dependencies:
 | Tool being used.                                     |  Version needed          |
 |------------------------------------------------------|--------------------------|
 | [Meson build system](https://mesonbuild.com)         | version 0.50.0 or newer. |
+| [Python Language   ](https://python.org).            | version 3.6.0 or newer.  |
 | [PyQt5             ](https://pypi.org/project/PyQt5/)| version 5.13.1 or newer. |
 
 
