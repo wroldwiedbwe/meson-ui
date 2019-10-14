@@ -58,7 +58,7 @@ We recommended you use the Python 3 version of ‘pip’ to
 install Meson-ui on to your system.
 
 ```console
-pip3 install meson-ui --user
+pip3 install git+https://github.com/michaelbadcrumble/meson-ui#egg=meson-ui --user
 ```
 <br>
 
