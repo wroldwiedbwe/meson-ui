@@ -2,7 +2,7 @@ version: 2.1
 executors:
   mesonui_builder:
     docker:
-      - image: squidfarts/mesonui-deps:0.1.0
+      - image: squidfarts/mesonui-deps:0.1.1
 
 jobs:
   mesonui_build:
