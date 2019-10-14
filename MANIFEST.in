@@ -1,0 +1,73 @@
+graft app
+graft docs
+
+include code_of_conduct.md
+include readme.md
+include LICENSE
+
+include run_utests.py
+include run_uitests.py
+include meson-ui.py
+include pyinstaller.py
+include app/__init__.py
+include app/__main__.py
+include app/src/__init__.py
+include app/src/main/__init__.py
+include app/src/main/activity_manager.py
+include app/src/main/appmain.py
+include app/src/main/appinfo.py
+
+include app/src/main/ui/__init__.py
+include app/src/main/ui/activity_info.py
+include app/src/main/ui/activity_main.py
+include app/src/main/ui/activity_setup.py
+include app/src/main/ui/resource_rc.py
+
+include app/src/main/mvc/__init__.py
+include app/src/main/mvc/mesonuimodle.py
+include app/src/main/mvc/mesonuimvc.py
+
+include app/src/main/view/__init__.py
+include app/src/main/view/setup_activity.py
+include app/src/main/view/main_activity.py
+include app/src/main/view/info_activity.py
+
+include app/src/main/mesonuilib/__init__.py
+
+include app/src/main/mesonuilib/introspection/__init__.py
+include app/src/main/mesonuilib/introspection/imesonintro.py
+include app/src/main/mesonuilib/introspection/mesonintroconsts.py
+include app/src/main/mesonuilib/introspection/mesonoptions.py
+include app/src/main/mesonuilib/introspection/mesonprojectinfo.py
+include app/src/main/mesonuilib/introspection/mesontargets.py
+include app/src/main/mesonuilib/introspection/mesontests.py
+
+include app/src/main/mesonuilib/ninjabuilder/__init__.py
+include app/src/main/mesonuilib/ninjabuilder/ninjabuilder.py
+
+include app/src/main/mesonuilib/meson/__init__.py
+include app/src/main/mesonuilib/meson/imesoncomponent.py
+include app/src/main/mesonuilib/meson/mesonmanager.py
+include app/src/main/mesonuilib/meson/mesonbuilder.py
+include app/src/main/mesonuilib/meson/mesonconfig.py
+include app/src/main/mesonuilib/meson/mesonintro.py
+
+include app/src/main/mesonuilib/console/__init__.py
+include app/src/main/mesonuilib/console/outputexejob.py
+include app/src/main/mesonuilib/console/outputformatter.py
+include app/src/main/mesonuilib/console/outputprocess.py
+
+include app/src/main/mesonuilib/backends/__init__.py
+include app/src/main/mesonuilib/backends/ibackend.py
+include app/src/main/mesonuilib/backends/kdevelopbackend.py
+include app/src/main/mesonuilib/backends/qtcreatorbackend.py
+include app/src/main/mesonuilib/backends/vs2010backend.py
+include app/src/main/mesonuilib/backends/vs2015backend.py
+include app/src/main/mesonuilib/backends/vs2017backend.py
+include app/src/main/mesonuilib/backends/vs2017backend.py
+include app/src/main/mesonuilib/backends/vs2019backend.py
+
+recursive-include app/src/res/assets *.png
+recursive-include app/src/res/icons *.png
+recursive-include app/src/res/layout *.ui
+recursive-include app/src/res/style *.qss
