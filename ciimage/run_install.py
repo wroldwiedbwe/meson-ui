@@ -21,7 +21,8 @@ apt_get_deps = [
     'libcurl3',
     'python3',
     'pkg-config', 
-    'python3-pip', 
+    'python3-pip',
+    'python3-pyqt5',
     'ninja-build',
     'build-essential']
     
