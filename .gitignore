@@ -1,1 +1,16 @@
+bin
+bin_dir
+
+build
+build_dir
+dist
+
+*.pyc
+*.swp
+*.egg-info
+*.so
+*.html
+
+.coverage
+.pytest_catche
 .DS_Store
