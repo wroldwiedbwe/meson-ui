@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Meson-ui</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(41, 41, 49);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label_logo">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>34</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    url(:/icons/icons/ic_app.png)
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../resource.qrc">:/ic_res/icons/ic_app.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>30</y>
+      <width>571</width>
+      <height>118</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_source">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font: 15pt &quot;Gill Sans&quot;</string>
+         </property>
+         <property name="text">
+          <string>Source directory:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="source_dir">
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    border-width: 5px;
+    border-radius: 15px;
+    font: 13pt &quot;Gill Sans&quot;;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 2 10px;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    selection-background-color: rgb(233, 233, 233);
+}</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLabel" name="lable_build">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font: 15pt &quot;Gill Sans&quot;</string>
+         </property>
+         <property name="text">
+          <string>Build directory:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="build_dir">
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    border-width: 5px;
+    border-radius: 15px;
+    font: 13pt &quot;Gill Sans&quot;;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 2 10px;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    selection-background-color: rgb(233, 233, 233);
+}</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="push_open">
+    <property name="geometry">
+     <rect>
+      <x>722</x>
+      <y>53</y>
+      <width>36</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: rgb(105, 105, 105);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: rgb(127, 127, 127);
+    color: rgb(255, 255, 255);
+    font: 13pt &quot;Gill Sans&quot;;
+    min-width: 2em;
+    padding: 1px;
+}
+
+QPushButton:pressed {
+    background-color: rgb(127, 127, 127);
+    border-style: inset;
+    color: rgb(36, 255, 6);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="../resource.qrc">
+      <normaloff>:/ic_res/icons/open_dir.png</normaloff>:/ic_res/icons/open_dir.png</iconset>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="mesonui_output_console">
+    <property name="geometry">
+     <rect>
+      <x>38</x>
+      <y>230</y>
+      <width>721</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit {
+    background-attachment: scroll;
+    background-color: rgb(63, 63, 63);
+    border-color: rgb(245, 251, 251);
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: beige;
+    padding: 6px;
+    color: rgb(63, 255, 6);
+    font: 13pt &quot;Monaco&quot;;
+}</string>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>170</y>
+      <width>721</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>-1</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="push_setup">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(105, 105, 105);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: rgb(127, 127, 127);
+    color: rgb(255, 255, 255);
+    font: 13pt &quot;Gill Sans&quot;;
+    min-width: 10em;
+    padding: 6px;
+}
+
+QPushButton:pressed {
+    background-color: rgb(127, 127, 127);
+    border-style: inset;
+    color: rgb(36, 255, 6);
+}</string>
+       </property>
+       <property name="text">
+        <string>Setup project</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="push_build">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(105, 105, 105);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: rgb(127, 127, 127);
+    color: rgb(255, 255, 255);
+    font: 13pt &quot;Gill Sans&quot;;
+    min-width: 10em;
+    padding: 6px;
+}
+
+QPushButton:pressed {
+    background-color: rgb(127, 127, 127);
+    border-style: inset;
+    color: rgb(36, 255, 6);
+}</string>
+       </property>
+       <property name="text">
+        <string>Build project</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="push_tests">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(105, 105, 105);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: rgb(127, 127, 127);
+    color: rgb(255, 255, 255);
+    font: 13pt &quot;Gill Sans&quot;;
+    min-width: 10em;
+    padding: 6px;
+}
+
+QPushButton:pressed {
+    background-color: rgb(127, 127, 127);
+    border-style: inset;
+    color: rgb(36, 255, 6);
+}</string>
+       </property>
+       <property name="text">
+        <string>Test project</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="push_install">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(105, 105, 105);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: rgb(127, 127, 127);
+    color: rgb(255, 255, 255);
+    font: 13pt &quot;Gill Sans&quot;;
+    min-width: 10em;
+    padding: 6px;
+}
+
+QPushButton:pressed {
+    background-color: rgb(127, 127, 127);
+    border-style: inset;
+    color: rgb(36, 255, 6);
+}</string>
+       </property>
+       <property name="text">
+        <string>Install project</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="push_clean">
+    <property name="geometry">
+     <rect>
+      <x>593</x>
+      <y>540</y>
+      <width>166</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: rgb(105, 105, 105);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: rgb(127, 127, 127);
+    color: rgb(255, 255, 255);
+    font: 13pt &quot;Gill Sans&quot;;
+    min-width: 10em;
+    padding: 6px;
+}
+
+QPushButton:pressed {
+    background-color: rgb(127, 127, 127);
+    border-style: inset;
+    color: rgb(36, 255, 6);
+}</string>
+    </property>
+    <property name="text">
+     <string>Clean project</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="push_docs">
+    <property name="geometry">
+     <rect>
+      <x>35</x>
+      <y>540</y>
+      <width>166</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: rgb(105, 105, 105);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: rgb(127, 127, 127);
+    color: rgb(255, 255, 255);
+    font: 13pt &quot;Gill Sans&quot;;
+    min-width: 10em;
+    padding: 6px;
+}
+
+QPushButton:pressed {
+    background-color: rgb(127, 127, 127);
+    border-style: inset;
+    color: rgb(36, 255, 6);
+}</string>
+    </property>
+    <property name="text">
+     <string>Meson docs</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="push_clear">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>120</y>
+      <width>36</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: rgb(105, 105, 105);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: rgb(127, 127, 127);
+    color: rgb(255, 255, 255);
+    font: 13pt &quot;Gill Sans&quot;;
+    min-width: 2em;
+    padding: 1px;
+}
+
+QPushButton:pressed {
+    background-color: rgb(127, 127, 127);
+    border-style: inset;
+    color: rgb(36, 255, 6);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="../resource.qrc">
+      <normaloff>:/ic_res/icons/clear.png</normaloff>:/ic_res/icons/clear.png</iconset>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMeson_ui">
+    <property name="title">
+     <string>Meson-ui</string>
+    </property>
+    <addaction name="actionAbout_Meson_ui"/>
+    <addaction name="actionOpen_folder"/>
+    <addaction name="actionQuit_Meson_ui"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionMeson_docs"/>
+    <addaction name="actionMeson_QnA"/>
+    <addaction name="actionMeson_ui_issue"/>
+    <addaction name="actionMeson_issue"/>
+   </widget>
+   <addaction name="menuMeson_ui"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionMeson_docs">
+   <property name="icon">
+    <iconset resource="../resource.qrc">
+     <normaloff>:/ic_res/icons/ic_docs.png</normaloff>:/ic_res/icons/ic_docs.png</iconset>
+   </property>
+   <property name="text">
+    <string>Meson docs</string>
+   </property>
+  </action>
+  <action name="actionMeson_QnA">
+   <property name="icon">
+    <iconset resource="../resource.qrc">
+     <normaloff>:/ic_res/icons/qna_ic.png</normaloff>:/ic_res/icons/qna_ic.png</iconset>
+   </property>
+   <property name="text">
+    <string>Meson QnA</string>
+   </property>
+  </action>
+  <action name="actionMeson_ui_issue">
+   <property name="icon">
+    <iconset resource="../resource.qrc">
+     <normaloff>:/ic_res/icons/github_ic.png</normaloff>:/ic_res/icons/github_ic.png</iconset>
+   </property>
+   <property name="text">
+    <string>Meson-ui issue</string>
+   </property>
+  </action>
+  <action name="actionMeson_issue">
+   <property name="icon">
+    <iconset resource="../resource.qrc">
+     <normaloff>:/ic_res/icons/github_ic.png</normaloff>:/ic_res/icons/github_ic.png</iconset>
+   </property>
+   <property name="text">
+    <string>Meson issue</string>
+   </property>
+  </action>
+  <action name="actionAbout_Meson_ui">
+   <property name="icon">
+    <iconset resource="../resource.qrc">
+     <normaloff>:/ic_res/icons/info_ic.png</normaloff>:/ic_res/icons/info_ic.png</iconset>
+   </property>
+   <property name="text">
+    <string>Info Meson-ui</string>
+   </property>
+  </action>
+  <action name="actionQuit_Meson_ui">
+   <property name="icon">
+    <iconset resource="../resource.qrc">
+     <normaloff>:/ic_res/icons/quit_ic.png</normaloff>:/ic_res/icons/quit_ic.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit Meson-ui</string>
+   </property>
+  </action>
+  <action name="actionOpen_folder">
+   <property name="icon">
+    <iconset resource="../resource.qrc">
+     <normaloff>:/ic_res/icons/open_dir.png</normaloff>:/ic_res/icons/open_dir.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open folder</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

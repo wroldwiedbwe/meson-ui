@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SetupDialog</class>
+ <widget class="QDialog" name="SetupDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>715</width>
+    <height>364</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Setup dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(41, 41, 49);</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>158</x>
+     <y>10</y>
+     <width>531</width>
+     <height>118</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <widget class="QLabel" name="label_curr_source">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+font: 15pt &quot;Gill Sans&quot;</string>
+        </property>
+        <property name="text">
+         <string>Source directory:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="curr_source_dir">
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border-width: 5px;
+    border-radius: 15px;
+    font: 13pt &quot;Gill Sans&quot;;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 2 10px;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    selection-background-color: rgb(233, 233, 233);
+}</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <item>
+       <widget class="QLabel" name="lable_curr_build">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+font: 15pt &quot;Gill Sans&quot;</string>
+        </property>
+        <property name="text">
+         <string>Build directory:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="curr_build_dir">
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border-width: 5px;
+    border-radius: 15px;
+    font: 13pt &quot;Gill Sans&quot;;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 2 10px;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    selection-background-color: rgb(233, 233, 233);
+}</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label_logo">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>21</y>
+     <width>81</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    url(:/icons/icons/ic_app.png)
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="../resource.qrc">:/ic_res/icons/ic_app.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>300</y>
+     <width>471</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QPushButton" name="push_not_yet">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: rgb(105, 105, 105);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: rgb(127, 127, 127);
+    color: rgb(255, 255, 255);
+    font: 13pt &quot;Gill Sans&quot;;
+    min-width: 10em;
+    padding: 6px;
+}
+
+QPushButton:pressed {
+    background-color: rgb(127, 127, 127);
+    border-style: inset;
+    color: rgb(36, 255, 6);
+}</string>
+      </property>
+      <property name="text">
+       <string>Not yet</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="push_setup">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: rgb(105, 105, 105);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: rgb(127, 127, 127);
+    color: rgb(255, 255, 255);
+    font: 13pt &quot;Gill Sans&quot;;
+    min-width: 10em;
+    padding: 6px;
+}
+
+QPushButton:pressed {
+    background-color: rgb(127, 127, 127);
+    border-style: inset;
+    color: rgb(36, 255, 6);
+}</string>
+      </property>
+      <property name="text">
+       <string>Setup project</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>31</x>
+     <y>130</y>
+     <width>658</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_11">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+font: 15pt &quot;Gill Sans&quot;</string>
+          </property>
+          <property name="text">
+           <string>Backend:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="combo_box_backend">
+          <property name="styleSheet">
+           <string notr="true">QComboBox {
+    background-color: white;
+    selection-color: rgb(34, 255, 12);
+    color: rgb(28, 170, 2);
+    border-width: 5px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    padding: 1px 10px 1px 50px;
+    min-width: 6em;
+    font: 13pt &quot;Gill Sans&quot;;
+}
+
+QComboBox:editable {
+    background: white;
+}
+
+QComboBox:on { /* shift the text when the popup opens */
+    padding-top: 3px;
+    padding-left: 4px;
+}
+
+/* shift the arrow when popup is open */
+QComboBox::down-arrow:on {
+    top: 1px;
+    left: 1px;
+}
+
+QComboBox::down-arrow {
+	url(:/ic_res/icons/down_arrow.png)
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>Ninja build</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Xcode</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Visual Studio 2010</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Visual Studio 2015</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Visual Studio 2017</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Visual Studio 2019</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_13">
+        <item>
+         <widget class="QLabel" name="label_10">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+font: 15pt &quot;Gill Sans&quot;</string>
+          </property>
+          <property name="text">
+           <string>buildtype:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="combo_box_buildtype">
+          <property name="styleSheet">
+           <string notr="true">QComboBox {
+    background-color: white;
+    selection-color: rgb(34, 255, 12);
+    color: rgb(28, 170, 2);
+    border-width: 5px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    padding: 1px 10px 1px 50px;
+    min-width: 6em;
+    font: 13pt &quot;Gill Sans&quot;;
+}
+
+QComboBox:editable {
+    background: white;
+}
+
+QComboBox:on { /* shift the text when the popup opens */
+    padding-top: 3px;
+    padding-left: 4px;
+}
+
+/* shift the arrow when popup is open */
+QComboBox::down-arrow:on {
+    top: 1px;
+    left: 1px;
+}
+
+QComboBox::down-arrow {
+	url(:/ic_res/icons/down_arrow.png)
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>debug</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>debugoptimized</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>release</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>plain</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>minsize</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>custom</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+font: 15pt &quot;Gill Sans&quot;</string>
+          </property>
+          <property name="text">
+           <string>optimization:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="combo_box_optimization">
+          <property name="styleSheet">
+           <string notr="true">QComboBox {
+    background-color: white;
+    selection-color: rgb(34, 255, 12);
+    color: rgb(28, 170, 2);
+    border-width: 5px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    padding: 1px 10px 1px 50px;
+    min-width: 6em;
+    font: 13pt &quot;Gill Sans&quot;;
+}
+
+QComboBox:editable {
+    background: white;
+}
+
+QComboBox:on { /* shift the text when the popup opens */
+    padding-top: 3px;
+    padding-left: 4px;
+}
+
+/* shift the arrow when popup is open */
+QComboBox::down-arrow:on {
+    top: 1px;
+    left: 1px;
+}
+
+QComboBox::down-arrow {
+	url(:/ic_res/icons/down_arrow.png)
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>g</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>1</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>3</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>s</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_10">
+        <item>
+         <widget class="QLabel" name="label_8">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+font: 15pt &quot;Gill Sans&quot;</string>
+          </property>
+          <property name="text">
+           <string>werror:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="combo_box_werror">
+          <property name="styleSheet">
+           <string notr="true">QComboBox {
+    background-color: white;
+    selection-color: rgb(34, 255, 12);
+    color: rgb(28, 170, 2);
+    border-width: 5px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    padding: 1px 10px 1px 50px;
+    min-width: 6em;
+    font: 13pt &quot;Gill Sans&quot;;
+}
+
+QComboBox:editable {
+    background: white;
+}
+
+QComboBox:on { /* shift the text when the popup opens */
+    padding-top: 3px;
+    padding-left: 4px;
+}
+
+/* shift the arrow when popup is open */
+QComboBox::down-arrow:on {
+    top: 1px;
+    left: 1px;
+}
+
+QComboBox::down-arrow {
+	url(:/ic_res/icons/down_arrow.png)
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>false</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>true</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+font: 15pt &quot;Gill Sans&quot;</string>
+          </property>
+          <property name="text">
+           <string>warning_level:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="combo_box_warning">
+          <property name="styleSheet">
+           <string notr="true">QComboBox {
+    background-color: white;
+    selection-color: rgb(34, 255, 12);
+    color: rgb(28, 170, 2);
+    border-width: 5px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    padding: 1px 10px 1px 50px;
+    min-width: 6em;
+    font: 13pt &quot;Gill Sans&quot;;
+}
+
+QComboBox:editable {
+    background: white;
+}
+
+QComboBox:on { /* shift the text when the popup opens */
+    padding-top: 3px;
+    padding-left: 4px;
+}
+
+/* shift the arrow when popup is open */
+QComboBox::down-arrow:on {
+    top: 1px;
+    left: 1px;
+}
+
+QComboBox::down-arrow {
+	url(:/ic_res/icons/down_arrow.png)
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>1</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>3</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_9">
+        <item>
+         <widget class="QLabel" name="label_layout">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+font: 15pt &quot;Gill Sans&quot;</string>
+          </property>
+          <property name="text">
+           <string>layout:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="combo_box_layout">
+          <property name="styleSheet">
+           <string notr="true">QComboBox {
+    background-color: white;
+    selection-color: rgb(34, 255, 12);
+    color: rgb(28, 170, 2);
+    border-width: 5px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    padding: 1px 10px 1px 50px;
+    min-width: 6em;
+    font: 13pt &quot;Gill Sans&quot;;
+}
+
+QComboBox:editable {
+    background: white;
+}
+
+QComboBox:on { /* shift the text when the popup opens */
+    padding-top: 3px;
+    padding-left: 4px;
+}
+
+/* shift the arrow when popup is open */
+QComboBox::down-arrow:on {
+    top: 1px;
+    left: 1px;
+}
+
+QComboBox::down-arrow {
+	url(:/ic_res/icons/down_arrow.png)
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>mirror</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>flat</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
