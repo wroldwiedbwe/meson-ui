@@ -100,9 +100,8 @@ meson-ui
 Let's start with the most basic of programs, the classic hello
 example. First we need to clone the example project from [GitHub](https://github.com/michaelbadcrumble/c-project.git).
 
-```console
-$ git clone https://github.com/michaelbadcrumble/c-project.git
-```
+You can also use your Meson build project if you wish but in this 
+tutorial I am using one of my C project templates.
 
 We are now ready to build our application. First we need
 to open the terminal and run the following commands.
