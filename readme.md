@@ -20,6 +20,15 @@ CMake users comfortable with Meson.
 Meson-ui was designed for those times while developing when you 
 you would like a GUI device.
 
+### Preview of the app.
+<p align="center">
+<img src="app/src/res/extra/preview-1.png">
+</p>
+
+### Preview of the build.
+<p align="center">
+<img src="app/src/res/extra/preview-2.png">
+</p>
 
 ## Features
 
