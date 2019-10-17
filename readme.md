@@ -25,10 +25,16 @@ you would like a GUI device.
 <img src="app/src/res/extra/preview-1.png">
 </p>
 
-### Preview of the build.
+### Preview of the setup dialog.
 <p align="center">
 <img src="app/src/res/extra/preview-2.png">
 </p>
+
+### Preview of the build.
+<p align="center">
+<img src="app/src/res/extra/preview-3.png">
+</p>
+
 
 ## Features
 
@@ -81,12 +87,83 @@ git clone https://github.com/michaelbadcrumble/meson-ui.git
 PyInstaller support is currently being tested.
 
 
-#### Run Meson-ui.
+### Run Meson-ui.
 
 To start the app, run this command:
 
 ```console
 meson-ui
+```
+
+### How to use Meson-ui.
+
+Let's start with the most basic of programs, the classic hello
+example. First we need to clone the example project from [GitHub](https://github.com/michaelbadcrumble/c-project.git).
+
+```console
+$ git clone https://github.com/michaelbadcrumble/c-project.git
+```
+
+We are now ready to build our application. First we need
+to open the terminal and run the following commands.
+
+```console
+$ meson-ui
+```
+
+If you launched the app from the command line, you will see the 
+application.  It looks somthing like this.
+
+<p align="center">
+<img src="app/src/res/extra/tutorial-1.png">
+</p>
+
+Now to use **Meson-ui** for a simple build.  First enter the 
+paths for source and build directory to your Meson project 
+or click on open directory button with the pickture of a folder
+on the lower right of the user interface.
+
+<p align="center">
+<img src="app/src/res/extra/tutorial-2.png">
+</p>
+
+Meson is different from some other build systems in that it
+does not permit in-source builds. You must always create a separate
+build directory. Common convention is to put the default build
+directory in a subdirectory of your top level source directory.
+
+When you click **Setup** Meson-ui will print the following output.
+
+<p align="center">
+<img src="app/src/res/extra/tutorial-3.png">
+</p>
+
+Now we are ready to build our code.  Just click **Build** to build
+the project.
+
+<p align="center">
+<img src="app/src/res/extra/tutorial-4.png">
+</p>
+
+Optionally you can run the test for the project by clicking **test**
+button.
+
+<p align="center">
+<img src="app/src/res/extra/tutorial-5.png">
+</p>
+
+
+And assuming you navigated to your project root directory you 
+can run the resulting binary from the command line.
+
+```console
+$ ./path/to/c-exe
+```
+
+This produces the expected output.
+
+```console
+    Hello, C.
 ```
 
 ### Contact the developer.
