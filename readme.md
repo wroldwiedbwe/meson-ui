@@ -128,24 +128,30 @@ on the lower right of the user interface.
 
 Meson is different from some other build systems in that it
 does not permit in-source builds. You must always create a separate
-build directory. Common convention is to put the default build
-directory in a subdirectory of your top level source directory.
+build directory. Common convention is to put the default build directory 
+in a subdirectory of your top level source directory.
 
+<p align="center">
 When you click **Setup** Meson-ui will print the following output.
+</p>
 
 <p align="center">
 <img src="app/src/res/extra/tutorial-3.png">
 </p>
 
+<p align="center">
 Now we are ready to build our code.  Just click **Build** to build
 the project.
+</p>
 
 <p align="center">
 <img src="app/src/res/extra/tutorial-4.png">
 </p>
 
+<p align="center">
 Optionally you can run the test for the project by clicking **test**
 button.
+</p>
 
 <p align="center">
 <img src="app/src/res/extra/tutorial-5.png">
