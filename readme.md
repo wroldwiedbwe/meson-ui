@@ -17,8 +17,14 @@ Meson-ui is a Graphical application designed to provide an interactive
 way to use the Meson build system. We believe it is a nice way to get
 CMake users comfortable with Meson.
 
-Meson-ui was designed for those times while developing when you 
-you would like a GUI device.
+The app was written in Python so that it can be OS egoistic and easy
+to download.  The definition of easy to download can be explained with
+the design of Meson-ui, witch was to be a command line plugin for Meson
+meaning if you have Meson then by entering “meson” followed the Meson
+arguments you would get totally normal Meson behavior but if you enter
+“meson-ui” then the GUI would open to provide that needed graphical
+experience to the users.
+
 
 ### Preview of the app.
 <p align="center">
