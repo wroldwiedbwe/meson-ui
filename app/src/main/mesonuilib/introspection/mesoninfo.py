@@ -17,7 +17,7 @@ import subprocess
 from os.path import join as join_paths
 
 
-class MesonIntrospection:
+class MesonInfo:
     '''
         This works on getting the data from Meson 'intro-*.json' files.
         and feeds it to the data wrappers classes.

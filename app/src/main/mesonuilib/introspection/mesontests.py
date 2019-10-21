@@ -15,15 +15,15 @@
 import json
 import subprocess
 from os.path import join as join_paths
-from .mesoninfo import MesonIntrospection
+from .mesoninfo import MesonInfo
 
 
 class MesonIntroTests:
     '''
         This is a data class for Meson project test info
     '''
-    def __init__(self, meson_info: MesonIntrospection = None):
-        self._meson_info: MesonIntrospection = meson_info
+    def __init__(self, meson_info: MesonInfo = None):
+        self._meson_info: MesonInfo = meson_info
 
     def get_command(self, index: int = 0):
         return self._meson_info.get_project_data(index, 'tests', 'cmd')
