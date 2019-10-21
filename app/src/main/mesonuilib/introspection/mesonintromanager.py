@@ -1,7 +1,7 @@
 #!/user/bin/env python3
 ###################################################################################
 #                                                                                 #
-# NAME: mesoninfo.py                                                              #
+# NAME: mesonintromanager.py                                                      #
 #                                                                                 #
 # AUTHOR: Michael Brockus.                                                        #
 #                                                                                 #
