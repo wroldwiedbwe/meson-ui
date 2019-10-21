@@ -13,25 +13,27 @@
 #                                                                                 #
 ###################################################################################
 import json
-import os, subprocess
-from ..introspection.imesonintro import InterfaceMesonIntro
-from .imesonintro import InterfaceMesonIntro
+import subprocess
+from os.path import join as join_paths
+from .mesoninfo import MesonIntrospection
 
 
-MESON_INTRO_PROJ: set = (
-    'version', 
-    'descriptive_name', 
-    'subproject_dir', 
-    'subprojects')
+class MesonIntroProjectInfo:
+    '''
+        This is a data class for Meson project info
+    '''
+    def __init__(self, meson_info: MesonIntrospection = None):
+        self._meson_info: MesonIntrospection = meson_info
 
+    def get_name(self):
+        return self._meson_info.get_intro('projectinfo', 'descriptive_name')
 
-class MesonIntroProject(InterfaceMesonIntro):
-    def __init__(self, project=None):
-        self._project = project
-        InterfaceMesonIntro().__init__(project=self._project)
-    # end of method
+    def get_version(self):
+        return self._meson_info.get_intro('projectinfo', 'version')
+    
+    def get_subprojects(self):
+        return self._meson_info.get_intro('projectinfo', 'subprojects')
+    
+    def get_subproject_dir(self):
+        return self._meson_info.get_intro('projectinfo', 'subproject_dir')
 
-    def _intro_getter(self, value: str):
-        intro_data = json.loads(self._intro_loader(['--projectinfo', self._project.get_build()]))
-        return intro_data[value]
-    # end of method

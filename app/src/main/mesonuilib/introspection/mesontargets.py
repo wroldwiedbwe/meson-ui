@@ -13,46 +13,56 @@
 #                                                                                 #
 ###################################################################################
 import json
-import os, subprocess
-from .imesonintro import InterfaceMesonIntro
+import subprocess
+from os.path import join as join_paths
+from .mesoninfo import MesonIntrospection
 
 
-MESON_INTRO_TARGET: set = (
-    'name', 
-    'id', 
-    'type', 
-    'defined_in', 
-    'filename', 
-    'build_by_default', 
-    'subproject', 
-    'installed')
+class MesonIntroTargets:
+    '''
+        This is a data class for Meson target info
+    '''
+    def __init__(self, meson_info: MesonIntrospection = None):
+        self._meson_info: MesonIntrospection = meson_info
 
-MESON_INTRO_TARGET_SOURCES: set = (
-    'language', 
-    'compiler', 
-    'parameters', 
-    'sources', 
-    'generated_sources')
+    def get_name(self, index: int = 0):
+        return self._meson_info.get_project_data(index, 'targets', 'name')
 
+    def get_id(self, index: int = 0):
+        return self._meson_info.get_project_data(index, 'targets', 'id')
 
-class MesonIntroTargetSources(InterfaceMesonIntro):
-    def __init__(self, project=None):
-        self._project = project
-        InterfaceMesonIntro().__init__(project=self._project)
+    def get_type(self, index: int = 0):
+        return self._meson_info.get_project_data(index, 'targets', 'type')
 
-    def _intro_getter(self, value: str):
-        intro_data = json.loads(self._intro_loader(['--targets', self._project.get_build()]))
-        subdata = intro_data[0]['target_sources']
-        return subdata[0][value]
-    # end of method
+    def get_defined_in(self, index: int = 0):
+        return self._meson_info.get_project_data(index, 'targets', 'defined_in')
 
+    def get_filename(self, index: int = 0):
+        return self._meson_info.get_project_data(index, 'targets', 'filename')
 
-class MesonIntroTarget(InterfaceMesonIntro):
-    def __init__(self, project=None):
-        self._project = project
-        InterfaceMesonIntro().__init__(project=self._project)
+    def get_build_by_default(self, index: int = 0):
+        return self._meson_info.get_project_data(index, 'targets', 'build_by_default')
 
-    def _intro_getter(self, value: str):
-        intro_data = json.loads(self._intro_loader(['--targets', self._project.get_build()]))
-        return intro_data[0][value]
-    # end of method
+    def get_target_sources(self, index: int = 0):
+        return self._meson_info.get_project_data(index, 'targets', 'target_sources')
+
+    def get_language(self, index: int = 0):
+        return self._meson_info.get_project_data(index, 'targets', 'language')
+
+    def get_compiler(self, index: int = 0):
+        return self._meson_info.get_project_data(index, 'targets', 'compiler')
+
+    def get_parameters(self, index: int = 0):
+        return self._meson_info.get_project_data(index, 'targets', 'parameters')
+
+    def get_sources(self, index: int = 0):
+        return self._meson_info.get_project_data(index, 'targets', 'sources')
+
+    def get_generated_sources(self, index: int = 0):
+        return self._meson_info.get_project_data(index, 'targets', 'generated_sources')
+
+    def get_subproject(self, index: int = 0):
+        return self._meson_info.get_project_data(index, 'targets', 'subproject')
+
+    def get_installed(self, index: int = 0):
+        return self._meson_info.get_project_data(index, 'targets', 'installed')

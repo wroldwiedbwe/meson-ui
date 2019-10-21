@@ -1,7 +1,7 @@
 #!/user/bin/env python3
 ###################################################################################
 #                                                                                 #
-# NAME: mesontests.py                                                             #
+# NAME: mesonbenchmarks.py                                                        #
 #                                                                                 #
 # AUTHOR: Michael Brockus.                                                        #
 #                                                                                 #
@@ -15,36 +15,35 @@
 import json
 import subprocess
 from os.path import join as join_paths
-from .mesoninfo import MesonIntrospection
 
 
-class MesonIntroTests:
+class MesonIntroBenchmarks:
     '''
-        This is a data class for Meson project test info
+        This is a data class for Meson benchmark info
     '''
     def __init__(self, meson_info: MesonIntrospection = None):
         self._meson_info: MesonIntrospection = meson_info
 
     def get_command(self, index: int = 0):
-        return self._meson_info.get_project_data(index, 'tests', 'cmd')
+        return self._meson_info.get_project_data(index, 'benchmarks', 'cmd')
 
     def get_environment(self, index: int = 0):
-        return self._meson_info.get_project_data(index, 'tests', 'env')
+        return self._meson_info.get_project_data(index, 'benchmarks', 'env')
 
     def get_name(self, index: int = 0):
-        return self._meson_info.get_project_data(index, 'tests', 'name')
+        return self._meson_info.get_project_data(index, 'benchmarks', 'name')
 
     def get_workdir(self, index: int = 0):
-        return self._meson_info.get_project_data(index, 'tests', 'workdir')
+        return self._meson_info.get_project_data(index, 'benchmarks', 'workdir')
 
     def get_timeout(self, index: int = 0):
-        return self._meson_info.get_project_data(index, 'tests', 'timeout')
+        return self._meson_info.get_project_data(index, 'benchmarks', 'timeout')
 
     def get_suite(self, index: int = 0):
-        return self._meson_info.get_project_data(index, 'tests', 'suite')
+        return self._meson_info.get_project_data(index, 'benchmarks', 'suite')
 
     def get_is_parallel(self, index: int = 0):
-        return self._meson_info.get_project_data(index, 'tests', 'is_parallel')
+        return self._meson_info.get_project_data(index, 'benchmarks', 'is_parallel')
 
     def get_priority(self, index: int = 0):
-        return self._meson_info.get_project_data(index, 'tests', 'priority')
+        return self._meson_info.get_project_data(index, 'benchmarks', 'priority')
