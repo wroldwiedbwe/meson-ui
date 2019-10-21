@@ -1,0 +1,30 @@
+[(--- Backlog ---)]
+===================================================
+[ ] : Introspection manager class 
+[x] : Introspection class for meson-info.json
+[x] : Introspection class for intro-tests.json
+[x] : Introspection class for intro-targets.json
+[x] : Introspection class for intro-projectinfo.json
+[ ] : Introspection class for intro-buildoptions.json
+[x] : Introspection class for intro-benchmarks.json
+[ ] : Rewriter class
+[ ] : ( Interface ) project generator 
+[ ] : ( Interface ) data scaner
+[ ] : ( Concrete  ) backend manager
+[ ] : Create QtCreator backend
+[ ] : Create KDevelop backend
+[ ] : Create Xcode backend
+[ ] : Create VS2010 backend
+[ ] : Create VS2015 backend
+[ ] : Create VS2017 backend
+[ ] : Create VS2019 backend
+[ ] : Configure model class
+[ ] : Add error handling
+[ ] : Add new introspect info activity
+[ ] : Add new configure options activity
+[ ] : Add more options in setup activity
+[ ] : Add Meson build version API
+[ ] : Add NCurses for command line users
+[ ] : Make Meson-ui wipe old project if setup again
+[ ] : Make Meson-ui reconfigure if updated
+[ ] : Make Meson-ui have light and dark themes
