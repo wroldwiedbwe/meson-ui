@@ -35,8 +35,9 @@ include app/src/main/view/info_activity.py
 include app/src/main/mesonuilib/__init__.py
 
 include app/src/main/mesonuilib/introspection/__init__.py
-include app/src/main/mesonuilib/introspection/imesonintro.py
-include app/src/main/mesonuilib/introspection/mesonintroconsts.py
+include app/src/main/mesonuilib/introspection/mesoninfo.py
+include app/src/main/mesonuilib/introspection/mesonbenchmarks.py
+include app/src/main/mesonuilib/introspection/mesonoptconsts.py
 include app/src/main/mesonuilib/introspection/mesonoptions.py
 include app/src/main/mesonuilib/introspection/mesonprojectinfo.py
 include app/src/main/mesonuilib/introspection/mesontargets.py
