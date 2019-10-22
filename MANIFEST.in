@@ -62,11 +62,6 @@ include app/src/main/mesonuilib/backends/__init__.py
 include app/src/main/mesonuilib/backends/ibackend.py
 include app/src/main/mesonuilib/backends/kdevelopbackend.py
 include app/src/main/mesonuilib/backends/qtcreatorbackend.py
-include app/src/main/mesonuilib/backends/vs2010backend.py
-include app/src/main/mesonuilib/backends/vs2015backend.py
-include app/src/main/mesonuilib/backends/vs2017backend.py
-include app/src/main/mesonuilib/backends/vs2017backend.py
-include app/src/main/mesonuilib/backends/vs2019backend.py
 
 recursive-include app/src/res/assets *.png
 recursive-include app/src/res/icons *.png
