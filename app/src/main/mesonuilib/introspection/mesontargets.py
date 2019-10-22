@@ -18,6 +18,29 @@ from os.path import join as join_paths
 from .mesoninfo import MesonInfo
 
 
+class MesonIntroTargetSources:
+    '''
+        This is a data class for Meson target sources info
+    '''
+    def __init__(self, meson_info: MesonInfo = None):
+        self._meson_info: MesonInfo = meson_info
+
+    def get_language(self, index: int = 0):
+        return self._meson_info.get_project_subdata(index, 'targets', 'language')
+
+    def get_compiler(self, index: int = 0):
+        return self._meson_info.get_project_subdata(index, 'targets', 'compiler')
+
+    def get_parameters(self, index: int = 0):
+        return self._meson_info.get_project_subdata(index, 'targets', 'parameters')
+
+    def get_sources(self, index: int = 0):
+        return self._meson_info.get_project_subdata(index, 'targets', 'sources')
+
+    def get_generated_sources(self, index: int = 0):
+        return self._meson_info.get_project_subdata(index, 'targets', 'generated_sources')
+
+
 class MesonIntroTargets:
     '''
         This is a data class for Meson target info
@@ -45,22 +68,7 @@ class MesonIntroTargets:
 
     def get_target_sources(self, index: int = 0):
         return self._meson_info.get_project_data(index, 'targets', 'target_sources')
-
-    def get_language(self, index: int = 0):
-        return self._meson_info.get_project_data(index, 'targets', 'language')
-
-    def get_compiler(self, index: int = 0):
-        return self._meson_info.get_project_data(index, 'targets', 'compiler')
-
-    def get_parameters(self, index: int = 0):
-        return self._meson_info.get_project_data(index, 'targets', 'parameters')
-
-    def get_sources(self, index: int = 0):
-        return self._meson_info.get_project_data(index, 'targets', 'sources')
-
-    def get_generated_sources(self, index: int = 0):
-        return self._meson_info.get_project_data(index, 'targets', 'generated_sources')
-
+    
     def get_subproject(self, index: int = 0):
         return self._meson_info.get_project_data(index, 'targets', 'subproject')
 

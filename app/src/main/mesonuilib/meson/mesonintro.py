@@ -12,11 +12,14 @@
 # License: Apache 2.0 :http://www.apache.org/licenses/LICENSE-2.0                 #
 #                                                                                 #
 ###################################################################################
-from ..introspection.mesonprojectinfo import MesonIntroProject
-from ..introspection.mesontargets import MesonIntroTarget
+from ..introspection.mesonprojectinfo import MesonIntroProjectInfo
+from ..introspection.mesonbenchmarks import MesonIntroBenchmarks
+from ..introspection.mesonoptions import MesonIntroOptions
+from ..introspection.mesontargets import MesonIntroTargets
 from ..introspection.mesontargets import MesonIntroTargetSources
+from ..introspection.mesonoptions import MesonIntroOptions
+from ..introspection.mesoninfo import MesonInfo
 from ..introspection.mesontests import MesonIntroTests
-from ..introspection.mesonoptions import MesonIntroOption
 from .imesoncomponent import InterfaceMesonComponent
 
 from PyQt5.QtCore import QProcess
@@ -24,33 +27,30 @@ from PyQt5.QtCore import QProcess
 
 class MesonIntrospection(InterfaceMesonComponent):
     def __init__(self, project=None, process: QProcess = None):
-        self._intro_proj = MesonIntroProject(project=project)
-        self._intro_opts = MesonIntroOption(project=project)
-        self._intro_test = MesonIntroTests(project=project)
-        self._intro_target = MesonIntroTarget(project=project)
-        self._intro_target_src = MesonIntroTargetSources(project=project)
-        self._process: QProcess = process
+        self._meson_info = MesonInfo(project=project)
+        self._intro_proj = MesonIntroProjectInfo(self._meson_info)
+        self._intro_opts = MesonIntroOptions(self._meson_info)
+        self._intro_test = MesonIntroTests(self._meson_info)
+        self._intro_target = MesonIntroTargets(self._meson_info)
+        self._intro_target_src = MesonIntroTargetSources(self._meson_info)
+        self._intro_benchmarks = MesonIntroBenchmarks(self._meson_info)
         super().__init__(project=project)
     # end of method
 
-    def introspection(self, key_string: str = '', value: str = '', option: int = 0) -> any:
-        if key_string == 'intro-build-option':
-            return self._intro_opts._intro_getter(option, value)
-        elif key_string == 'intro-projectinfo':
-            return self._intro_proj._intro_getter(value)
-        elif key_string == 'intro-target':
-            return self._intro_target._intro_getter(value)
-        elif key_string == 'intro-target-sources':
-            return self._intro_target_src._intro_getter(value)
-        elif key_string == 'intro-tests':
-            return self._intro_test._intro_getter(value)
+    def introspection(self, key: str = 'projectinfo') -> any:
+        if key == 'buildoptions':
+            return self._intro_opts
+        elif key == 'projectinfo':
+            return self._intro_proj
+        elif key == 'targets':
+            return self._intro_target
+        elif key == 'targets-sources':
+            return self._intro_target_src
+        elif key == 'benchmark':
+            return self._intro_benchmarks
+        elif key == 'tests':
+            return self._intro_test
         else:
-            self.error('Unknon introspection key:')
+            RuntimeError('Unknon introspection key:')
         return []
-    # end of method
-
-    def _run(self, args) -> None:
-        self._process.waitForStarted()
-        self._process.start('meson', args)
-        self._process.waitForFinished()
     # end of method

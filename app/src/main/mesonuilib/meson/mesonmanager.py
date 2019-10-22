@@ -17,7 +17,7 @@ from PyQt5.QtCore import QObject
 import json
 import os, subprocess
 
-# from .mesonintro import MesonIntrospection
+from .mesonintro import MesonIntrospection
 from .mesonbuilder import MesonBuilder
 from .mesonconfig import MesonConfig
 
@@ -27,14 +27,14 @@ class Meson(QObject):
         super(Meson, self).__init__()
         self._project = parent
         self._process = QProcess(self)
-        # self.meson_mbintro = MesonIntrospection(self._project, self._process)
+        self.meson_intro = MesonIntrospection(self._project, self._process)
         self.meson_builder = MesonBuilder(self._project, self._process)
         self.meson_configs = MesonConfig(self._project, self._process)
         # Need to add Meson rewriter "MesonRewriter(self._project, self._process)"
     # end of method
 
-    def introspection(self, key_string: str = '', value: str = '', option: int = 0) -> any:
-        pass
+    def introspection(self, key_string: str = '') -> any:
+        return self.meson_intro.introspection(key=key_string)
     # end of method
 
     def setup(self, args: list = []) -> None:
