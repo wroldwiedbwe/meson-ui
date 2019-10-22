@@ -52,7 +52,9 @@ class MesonInfo:
     def get_project_subdata(self, index: int, key: str , value: str) -> any:
         with open(join_paths(self._intro_load_infodir(), self._intro_load_data(key)), 'r') as f:
             prog_info = json.load(f)
-        return prog_info[index]['target_sources'][value]
+            # Some work needs to be done here before sub intro class
+            # are used for backends.
+        return prog_info[index]['target_sources'][index][value]
 
     def get_option(self, index: int, key: str, value: str):
         with open(join_paths(self._intro_load_infodir(), self._intro_load_data(key)), 'r') as f:
