@@ -56,12 +56,8 @@ class MainActivity(QMainWindow, Ui_MainWindow):
     pyqtSlot()
     def on_create(self) -> None:
    
-        # Meson-ui menu bar.
-        self.actionOpen_folder.triggered.connect(lambda: self.onclick_open())
-        self.actionAbout_Meson_ui.triggered.connect(lambda: self.onclick_info())
-        self.actionQuit_Meson_ui.triggered.connect(lambda: self.onclick_quit())
-        
         # Meson-ui help.
+        self.actionAbout_Meson_ui.triggered.connect(lambda: self.onclick_info())
         self.actionMeson_docs.triggered.connect(lambda: self.onclick_docs())
         self.actionMeson_QnA.triggered.connect(lambda: self.onclick_faqs())
         self.actionMeson_ui_issue.triggered.connect(lambda: self.onclick_mesonui_issue())
