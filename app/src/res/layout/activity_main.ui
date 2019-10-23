@@ -410,24 +410,17 @@ QPushButton:pressed {
      <height>22</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuMeson_ui">
-    <property name="title">
-     <string>Meson-ui</string>
-    </property>
-    <addaction name="actionAbout_Meson_ui"/>
-    <addaction name="actionOpen_folder"/>
-    <addaction name="actionQuit_Meson_ui"/>
-   </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
      <string>Help</string>
     </property>
+    <addaction name="actionAbout_Meson_ui"/>
     <addaction name="actionMeson_docs"/>
     <addaction name="actionMeson_QnA"/>
+    <addaction name="separator"/>
     <addaction name="actionMeson_ui_issue"/>
     <addaction name="actionMeson_issue"/>
    </widget>
-   <addaction name="menuMeson_ui"/>
    <addaction name="menuHelp"/>
   </widget>
   <action name="actionMeson_docs">
@@ -472,25 +465,7 @@ QPushButton:pressed {
      <normaloff>:/ic_res/icons/info_ic.png</normaloff>:/ic_res/icons/info_ic.png</iconset>
    </property>
    <property name="text">
-    <string>Info Meson-ui</string>
-   </property>
-  </action>
-  <action name="actionQuit_Meson_ui">
-   <property name="icon">
-    <iconset resource="../resource.qrc">
-     <normaloff>:/ic_res/icons/quit_ic.png</normaloff>:/ic_res/icons/quit_ic.png</iconset>
-   </property>
-   <property name="text">
-    <string>Exit Meson-ui</string>
-   </property>
-  </action>
-  <action name="actionOpen_folder">
-   <property name="icon">
-    <iconset resource="../resource.qrc">
-     <normaloff>:/ic_res/icons/open_dir.png</normaloff>:/ic_res/icons/open_dir.png</iconset>
-   </property>
-   <property name="text">
-    <string>Open folder</string>
+    <string>About Meson-ui</string>
    </property>
   </action>
  </widget>
