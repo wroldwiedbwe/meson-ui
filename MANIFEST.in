@@ -28,9 +28,10 @@ include app/src/main/mvc/mesonuimodle.py
 include app/src/main/mvc/mesonuimvc.py
 
 include app/src/main/view/__init__.py
-include app/src/main/view/setup_activity.py
 include app/src/main/view/main_activity.py
+include app/src/main/view/setup_activity.py
 include app/src/main/view/info_activity.py
+include app/src/main/view/conf_activity.py
 
 include app/src/main/mesonuilib/__init__.py
 
