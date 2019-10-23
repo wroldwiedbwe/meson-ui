@@ -17,7 +17,7 @@ import sys
 class MesonUiPyPiInfo:
     @staticmethod
     def get_version() -> str:
-        return '0.1.0'
+        return '0.1.1'
     # end of method
 
     @staticmethod
