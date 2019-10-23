@@ -1633,7 +1633,7 @@ class Ui_SetupDialog(object):
         self.tabWidget.addTab(self.tab_base_opt, "")
 
         self.retranslateUi(SetupDialog)
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(SetupDialog)
 
     def retranslateUi(self, SetupDialog):
