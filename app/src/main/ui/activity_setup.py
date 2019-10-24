@@ -1741,7 +1741,7 @@ class Ui_SetupDialog(object):
         self.combo_box_b_bitcode.setItemText(0, _translate("SetupDialog", "false"))
         self.combo_box_b_bitcode.setItemText(1, _translate("SetupDialog", "true"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_base_opt), _translate("SetupDialog", "Base options"))
-import resource_rc
+from . import resource_rc
 
 
 if __name__ == "__main__":
