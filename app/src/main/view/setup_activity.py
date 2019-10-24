@@ -86,7 +86,7 @@ class SetupActivity(QMainWindow, Ui_SetupDialog):
                 f'-Db_ndebug={self.combo_box_b_ndebug.currentText()}',
                 f'-Db_pch={self.combo_box_b_pch.currentText()}',
                 f'-Db_pgo={self.combo_box_b_pgo.currentText()}',
-                # f'--b_pie={self.combo_box_b_pic.currentText()}',  Some issues with this flag
+                f'--b_pie={self.combo_box_b_pie.currentText()}',
                 f'-Db_sanitize={self.combo_box_b_sanitize.currentText()}',
                 f'-Db_staticpic={self.combo_box_b_staticpic.currentText()}']
 
