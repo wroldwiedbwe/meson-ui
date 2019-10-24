@@ -123,11 +123,7 @@ class Ui_SetupDialog(object):
         self.horizontalLayout_2.addWidget(self.push_setup)
         self.tabWidget = QtWidgets.QTabWidget(SetupDialog)
         self.tabWidget.setGeometry(QtCore.QRect(1, 130, 731, 271))
-        self.tabWidget.setStyleSheet("QTabWidget {\n"
-"    colore: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QTabWidget::pane { /* The tab widget frame */\n"
+        self.tabWidget.setStyleSheet("QTabWidget::pane { /* The tab widget frame */\n"
 "    border-top: 2px solid #C2C7CB;\n"
 "}\n"
 "\n"
@@ -1746,7 +1742,7 @@ class Ui_SetupDialog(object):
         self.combo_box_b_bitcode.setItemText(0, _translate("SetupDialog", "false"))
         self.combo_box_b_bitcode.setItemText(1, _translate("SetupDialog", "true"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_base_opt), _translate("SetupDialog", "Base options"))
-from . import resource_rc
+import resource_rc
 
 
 if __name__ == "__main__":
