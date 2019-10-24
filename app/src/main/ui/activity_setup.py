@@ -134,7 +134,6 @@ class Ui_SetupDialog(object):
 "/* Style the tab using the tab sub-control. Note that\n"
 "    it reads QTabBar _not_ QTabWidget */\n"
 "QTabBar::tab {\n"
-"    colore: rgb(255, 255, 255);\n"
 "    background: rgb(123, 123, 123);\n"
 "    border: 2px solid #C4C4C3;\n"
 "    border-bottom-color: #C2C7CB; /* same as the pane color */\n"
@@ -1742,7 +1741,7 @@ class Ui_SetupDialog(object):
         self.combo_box_b_bitcode.setItemText(0, _translate("SetupDialog", "false"))
         self.combo_box_b_bitcode.setItemText(1, _translate("SetupDialog", "true"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_base_opt), _translate("SetupDialog", "Base options"))
-from . import resource_rc
+import resource_rc
 
 
 if __name__ == "__main__":
