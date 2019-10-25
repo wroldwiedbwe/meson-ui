@@ -35,6 +35,20 @@ class MesonBuilder(InterfaceMesonComponent):
         self._run(meson_args)
     # end of method
 
+    def reconfigure(self, args: list = []) -> None:
+        meson_args: list = ['setup', self._project.get_source(), self._project.get_build()]
+        meson_args.extend(args)
+        meson_args.extend('--reconfigure')
+        self._run(meson_args)
+    # end of method
+
+    def wipe(self, args: list = []) -> None:
+        meson_args: list = ['setup', self._project.get_source(), self._project.get_build()]
+        meson_args.extend(args)
+        meson_args.extend('--wipe')
+        self._run(meson_args)
+    # end of method
+
     def tests(self) -> None:
         meson_args: list = ['test', '-C', self._project.get_build()]
         self._run(meson_args)

@@ -41,6 +41,14 @@ class Meson(QObject):
         self.meson_builder.setup(args)
     # end of method
 
+    def reconfigure(self, args: list = []) -> None:
+        self.meson_builder.reconfigure(args)
+    # end of method
+    
+    def wipe(self, args: list = []) -> None:
+        self.meson_builder.wipe(args)
+    # end of method
+
     def build(self) -> None:
         self.meson_builder.build()
     # end of method
