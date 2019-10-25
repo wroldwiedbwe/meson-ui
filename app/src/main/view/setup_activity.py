@@ -99,7 +99,10 @@ class SetupActivity(QMainWindow, Ui_SetupDialog):
             if self.get_strip() == 'true':
                 meson_args.extend(['--strip'])
 
-            self._parent.meson.setup(meson_args)
+            if path.exists(self._parent._data_model.get_build()):
+                self._parent.meson.wipe(meson_args)
+            else:
+                self._parent.meson.setup(meson_args)
     # end of method
 
     def onclick_not_yet(self):
