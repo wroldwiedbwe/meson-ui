@@ -26,6 +26,8 @@ include app/src/main/ui/resource_rc.py
 include app/src/main/mvc/__init__.py
 include app/src/main/mvc/mesonuimodle.py
 include app/src/main/mvc/mesonuimvc.py
+include app/src/main/mvc/configuremodle.py
+include app/src/main/mvc/configuremvc.py
 
 include app/src/main/view/__init__.py
 include app/src/main/view/main_activity.py
