@@ -81,7 +81,7 @@ class MainActivity(QMainWindow, Ui_MainWindow):
         self._controller.meson_script_dir_did_changed(join_paths(self.source_dir.text(), 'meson.build'))
         self._controller.meson_build_dir_did_changed(self.build_dir.text())
 
-        self.intent_setup = SetupActivity(self, self._data_model, self._controller)
+        self.intent_setup = SetupActivity(self)
         self.intent_setup.show()
     # end of method
 
