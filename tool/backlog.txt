@@ -13,12 +13,13 @@
 [ ] : ( Concrete  ) backend manager
 [ ] : Create QtCreator backend
 [ ] : Create KDevelop backend
-[ ] : Configure model class
+[x] : Configure model class
+[ ] : Impl configure activity
 [ ] : Add error handling
 [ ] : Add new introspect info activity
 [x] : Add new configure options activity
 [x] : Add more options in setup activity
 [ ] : Add NCurses for command line users
-[/] : Make Meson-ui wipe old project if setup again
-[/] : Make Meson-ui reconfigure if updated
+[x] : Make Meson-ui wipe old project if setup again
+[x] : Make Meson-ui reconfigure if updated
 [ ] : Make Meson-ui have light and dark themes
